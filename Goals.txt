@@ -1,0 +1,13 @@
+THE PROBLEM:
+
+
+INTERMEDIATE GOALS:
+	Familiarize group with use of openViBE software and Emotiv Epoc
+
+	Design and implement simple classifiers to solve the problem in the single dimension input 		
+	scenario.
+
+
+END GOAL:
+	Measure EEG signals and use the groups written classifiers to allow three-dimensional movement 		
+	independent of the direction the subject is facing. 
