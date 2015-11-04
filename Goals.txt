@@ -1,11 +1,21 @@
 THE PROBLEM:
+	Moving and facing a inherently tied problems, such that moving is handle in respect to the direction of current facing.
+	Ideally, moving and facing should be independant process when handled by EEG.
 
 
 INTERMEDIATE GOALS:
-	Familiarize group with use of openViBE software and Emotiv Epoc
+	Familiarize group with use of openViBE software and Emotiv EPOC.
 
-	Design and implement simple classifiers to solve the problem in the single dimension input 		
-	scenario.
+	Design and implement simple classifiers to solve the problem in the single dimension input scenario.
+		Classifier should be able to quntize brainwaves into simple input (i.e. left, right, up, down, etc.)
+		Classifier should also handle this in a learning process (i.e. analyze patterns of brainwaves and extrapolate accordingly).
+
+        Refine classifier and possibly signal processing for two-dimensional system (move and look independantly on 2D plane).
+		Signal processor should be able to break a complex waveform into simpler ones (possibly in various spaces) to
+			allow easier pattern recognition in the classifier
+
+		Classifier should be able to handle (possibly multiple) waveforms and translate into a combination of
+			 commands (i.e. left + up, left + down, etc.).
 
 
 END GOAL:
