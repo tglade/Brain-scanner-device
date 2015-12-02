@@ -1,23 +1,33 @@
-THE PROBLEM:
-	Moving and facing a inherently tied problems, such that moving is handle in respect to the direction of current facing.
-	Ideally, moving and facing should be independant process when handled by EEG.
+**END GOAL**:
+	Use EEG signals to interface with a computer by emulating keyboard and mouse signals. These inputs will
+	be fed into some sort of emulated or direct computer game and be used to control the game.
 
 
-INTERMEDIATE GOALS:
+**INTERMEDIATE GOALS**:
 	Familiarize group with use of openViBE software and Emotiv EPOC.
 
-	Design and implement simple classifiers to solve the problem in the single dimension input scenario.
-		Classifier should be able to quntize brainwaves into simple input (i.e. left, right, up, down, etc.)
-		Classifier should also handle this in a learning process (i.e. analyze patterns of brainwaves and extrapolate accordingly).
-
-        Refine classifier and possibly signal processing for two-dimensional system (move and look independantly on 2D plane).
-		Signal processor should be able to break a complex waveform into simpler ones (possibly in various spaces) to
-			allow easier pattern recognition in the classifier
+	Create an algorithm which will detect brain wave patterns from the EPOC through the drivers provided by openViBE.
+		This algroithm will be used to create a classifier which will codify brain waves into certain sets,
+		which, in turn, will eventually be transformed into the keyboard or mouse commands.
 
 		Classifier should be able to handle (possibly multiple) waveforms and translate into a combination of
 			 commands (i.e. left + up, left + down, etc.).
 
+	(Side note: Possible expansion by adding more keys or key combinations to a list of possible commands. Perhaps
+		    start with fewer total keys that have patterns associated with a key press.)
 
-END GOAL:
-	Measure EEG signals and use the groups written classifiers to allow three-dimensional movement 		
-	independent of the direction the subject is facing. 
+	Create a program which will create a basis set for the pattern matching algorithm. This program should prompt the user
+		to make some action repeatedly for each key to create a set of patterns for each command. Ideally, these patterns should
+		be consistent enough to extrapolate to future actions that are passed to the pattern matching algorithm. 	
+
+	(Side note: Possible expansion by creating a signal processor which will boost the signal of the patterns received to
+		    recognise thoughts of actions rather than directly acting.)
+
+
+**TESTING GOALS**:
+	In order to test the functionallity of both the pattern matching algorithm and the basis set creator, we will test both
+		in conjunction with openViBE and the EPOC on a small game program (emulated or otherwise). A user should be able
+		to run the program, create a basis set by being prompted, and then play the game using the gestures they specified
+		in the basis set creation.
+
+	Other tests may be added later to show complete or extended functionality of the program. 
