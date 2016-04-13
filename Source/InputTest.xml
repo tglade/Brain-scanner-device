@@ -73,7 +73,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>240.000000</Value>
+					<Value>242.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x30a4e5c9, 0x83502953)</Identifier>
@@ -394,7 +394,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x6267b5c5, 0x676e3e42)</Identifier>
-					<Value>232</Value>
+					<Value>234</Value>
 				</Attribute>
 			</Attributes>
 		</Link>
@@ -452,13 +452,33 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x6267b5c5, 0x676e3e42)</Identifier>
-					<Value>247</Value>
+					<Value>249</Value>
 				</Attribute>
 			</Attributes>
 		</Link>
 	</Links>
 	<MessageLinks></MessageLinks>
-	<Comments></Comments>
+	<Comments>
+		<Comment>
+			<Identifier>(0x00002ca7, 0x00004cd8)</Identifier>
+			<Text>&lt;b&gt;Configure the Matlab Scripting box:&lt;/b&gt;
+
+&lt;span color=&quot;red&quot;&gt; Set the matlab executable path before use !&lt;/span&gt;
+
+Enter the path to your local Matlab installation.
+</Text>
+			<Attributes>
+				<Attribute>
+					<Identifier>(0x473d9a43, 0x97fc0a97)</Identifier>
+					<Value>224.000000</Value>
+				</Attribute>
+				<Attribute>
+					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
+					<Value>432.000000</Value>
+				</Attribute>
+			</Attributes>
+		</Comment>
+	</Comments>
 	<VisualisationTree>
 		<VisualisationWidget>
 			<Identifier>(0x000006d1, 0x00007833)</Identifier>
