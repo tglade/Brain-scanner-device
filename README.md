@@ -1,7 +1,9 @@
 Neural Interfacing 
 ==========================
   Thomas Glade
+  
   Tyler Brutsman
+  
   Adam Kacmarsky
 
 Project
