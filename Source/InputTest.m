@@ -5,19 +5,31 @@
 %Plan is to use this matrix to train a neural net in the uninit script.
 %
 %Modified by: Adam
-%Last Modified: 13/4/16
+%Last Modified: 15/4/16
 
 function box_out = InputTest(box_in)
-
-    %import java.awt.AWTException;
-    %import java.awt.Robot;
-    %import java.awt.event.KeyEvent;
-    %import java.util.concurrent.TimeUnit;
     
-    %robot=Robot;
-    
+    %variables for keybindings
     persistent w;
-    persistent s;    
+    persistent s;
+    
+    %input and target test matrices
+    persistent xArray;
+    persistent tArray;
+    
+    %loop variable for matrix append
+    persistent j;
+    
+    %initialize persitent vars if not set
+    if isempty(j)
+        j = 1;
+    end
+    if isempty(xArray)
+        xArray = zeros(14, 32, 1);
+    end
+    if isempty(tArray)
+        tArray = zeros(2, 1);
+    end
     
     for i = 1: OV_getNbPendingInputChunk(box_in,2)
 		
@@ -27,17 +39,15 @@ function box_out = InputTest(box_in)
         %stim_set is a 3x1 matrix, where the first value is the value of
         %the label sent by the simulation. If there is at least one
         %stimulation in the set, run the keyboar handler.
-		if(numel(stim_set) >= 3)
+        if(numel(stim_set) >= 3)
             %33205 is the value of stimulation label 01. 
             if stim_set(1) == 33025
                 w = 1;
                 %switch a trigger so that the chunk of data is handled
                 %later
                 box_in.user_data.trigger_state = ~box_in.user_data.trigger_state;
-            end
-            
             %33026 is the value of stimulation label 02
-            if stim_set(1) == 33026
+            elseif stim_set(1) == 33026
                 s = 1;
                 box_in.user_data.trigger_state = ~box_in.user_data.trigger_state;
             end
@@ -55,24 +65,22 @@ function box_out = InputTest(box_in)
         %associated stimulation chunk to output matrix (t).
         if (box_in.user_data.trigger_state)
             box_in.user_data.trigger_state = ~box_in.user_data.trigger_state;
-            disp(w);
             if (w == 1)
-                disp(matrix_data);
+                w = 0;
+                xArray(:, :, j) = matrix_data;
+                tArray(:, j) = [1 0];
+                j = j + 1;
+            elseif (s == 1)
+                s = 0;
+                xArray(:, :, j) = matrix_data;
+                tArray(:, j) = [0 1];
+                j = j + 1;                
             end
         end
         
-        %{
-        if (average > 0)
-            robot.keyRelease(KeyEvent.VK_LEFT);
-            robot.keyPress(KeyEvent.VK_RIGHT);
-        elseif (average < 0)
-            robot.keyRelease(KeyEvent.VK_RIGHT);
-            robot.keyPress(KeyEvent.VK_LEFT);
-        else
-            robot.keyRelease(KeyEvent.VK_RIGHT);
-            robot.keyRelease(KeyEvent.VK_LEFT);
-        end
-        %}
+        %save variables to use in uninit file to train net
+        save('train.mat', 'xArray', 'tArray', '-v7.3');
+        
         
     end
     
