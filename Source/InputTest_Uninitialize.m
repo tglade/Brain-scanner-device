@@ -1,3 +1,9 @@
+%Unit function for trainer. All neural net training is done here to prevent
+%slow-down, and to ensure complete data from the user. The trained neural
+%net is then save to 'net.mat'.
+%
+%Modified by: Adam
+%Last Modified: 16/4/16
 function box_out = InputTest_Uninitialize(box_in)
 
 	disp('Training neural net. Please do not close window.')
@@ -10,12 +16,9 @@ function box_out = InputTest_Uninitialize(box_in)
     disp(size(xArray));
     disp(size(tArray));
     
-    %try reshaping x to train. May work, may not.
-    newX = reshape(xArray(:,:,:),[],14);
-    
     %train up the neural net
     net = patternnet(10);
-    [net,tr] = train(net,newX,tArray);
+    [net,tr] = train(net,xArray,tArray);
     nntraintool;
     plotperform(tr);
     

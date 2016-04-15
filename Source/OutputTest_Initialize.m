@@ -1,3 +1,8 @@
+%Init function for classifier. Only important part is that the trigger_state
+%is initialized to false.
+%
+%Modified by: Adam
+%Last Modified: 16/4/16
 function box_out = OutputTest_Initialize(box_in)
     disp('Initialize function has been called');
     
