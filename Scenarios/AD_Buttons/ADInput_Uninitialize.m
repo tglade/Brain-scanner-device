@@ -3,8 +3,8 @@
 %net is then save to 'net.mat'.
 %
 %Modified by: Adam
-%Last Modified: 16/4/16
-function box_out = InputTest_Uninitialize(box_in)
+%Last Modified: 17/4/16
+function box_out = ADInput_Uninitialize(box_in)
 
 	disp('Training neural net. Please do not close window.')
     
@@ -17,10 +17,6 @@ function box_out = InputTest_Uninitialize(box_in)
     disp(size(tArray));
     
     %train up the neural net
-    %The number inside the patternnet function indicates the number of
-    %nodes in the hidden layer of the neural net. It should be changed
-    %accordingly to give the maximum output of correct answers for the data
-    %set.
     net = patternnet(33);
     [net,tr] = train(net,xArray,tArray);
     nntraintool;

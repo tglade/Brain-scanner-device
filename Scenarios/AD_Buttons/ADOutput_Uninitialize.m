@@ -5,8 +5,8 @@
 %pressed and then release only those, rather than all keys possible.
 %
 %Modified by: Adam
-%Last Modified: 16/4/16
-function box_out = OutputTest_Uninitialize(box_in)
+%Last Modified: 17/4/16
+function box_out = ADOutput_Uninitialize(box_in)
 	disp('Unitializing...')
     
     %imports for keyboard output handling
@@ -16,8 +16,8 @@ function box_out = OutputTest_Uninitialize(box_in)
     import java.util.concurrent.TimeUnit;
     
     robot=Robot;
-    robot.keyRelease(KeyEvent.VK_W);
-    robot.keyRelease(KeyEvent.VK_S);
+    robot.keyRelease(KeyEvent.VK_A);
+    robot.keyRelease(KeyEvent.VK_D);
     
     box_out = box_in;
 end

@@ -5,11 +5,11 @@
 %Modified by: Adam
 %Last Modified: 16/4/16
 
-function box_out = InputTest(box_in)
+function box_out = ADInput(box_in)
     
     %variables for keybindings
-    persistent w;
-    persistent s;
+    persistent a;
+    persistent d;
     
     %input and target test matrices
     persistent xArray;
@@ -42,15 +42,16 @@ function box_out = InputTest(box_in)
         %the label sent by the simulation. If there is at least one
         %stimulation in the set, run the keyboar handler.
         if(numel(stim_set) >= 3)
+            disp(stim_set);
             %33205 is the value of stimulation label 01. 
             if stim_set(1) == 33025
-                w = 1;
+                a = 1;
                 %switch a trigger so that the chunk of data is handled
                 %later
                 box_in.user_data.trigger_state = ~box_in.user_data.trigger_state;
             %33026 is the value of stimulation label 02
             elseif stim_set(1) == 33026
-                s = 1;
+                d = 1;
                 box_in.user_data.trigger_state = ~box_in.user_data.trigger_state;
             end
         end
@@ -67,16 +68,16 @@ function box_out = InputTest(box_in)
         %associated stimulation chunk to output matrix (t).
         if (box_in.user_data.trigger_state)
             box_in.user_data.trigger_state = ~box_in.user_data.trigger_state;
-            if (w == 1)
-                w = 0;
+            if (a == 1)
+                a = 0;
                 [~,I] = max(matrix_data(:));
                 [~,n] = ind2sub(size(matrix_data), I);
                 xArray(:,j) = matrix_data(:,n);
                 tArray(:, j) = [1 0 0];
                 j = j + 1;
                 k = 1;
-            elseif (s == 1)
-                s = 0;
+            elseif (d == 1)
+                d = 0;
                 %get max value in a chunk, and get the column
                 [~,I] = max(matrix_data(:));
                 [~,n] = ind2sub(size(matrix_data), I);

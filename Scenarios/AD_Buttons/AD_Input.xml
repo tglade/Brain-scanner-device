@@ -33,28 +33,28 @@
 					<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
 					<Name>Matlab working directory</Name>
 					<DefaultValue>${Player_ScenarioDirectory}</DefaultValue>
-					<Value>C:/Users/Adam/Documents/GitHub/Brain-scanner-device/Source</Value>
+					<Value>C:/Users/Adam/Documents/GitHub/Brain-scanner-device/Scenarios/AD_Buttons</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
 					<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
 					<Name>Initialize function</Name>
 					<DefaultValue>matlab_Initialize</DefaultValue>
-					<Value>InputTest_Initialize</Value>
+					<Value>ADInput_Initialize</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
 					<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
 					<Name>Process function</Name>
 					<DefaultValue>matlab_Process</DefaultValue>
-					<Value>InputTest</Value>
+					<Value>ADInput</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 				<Setting>
 					<TypeIdentifier>(0x79a9edeb, 0x245d83fc)</TypeIdentifier>
 					<Name>Uninitialize function</Name>
 					<DefaultValue>matlab_Uninitialize</DefaultValue>
-					<Value>InputTest_Uninitialize</Value>
+					<Value>ADInput_Uninitialize</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 			</Settings>
@@ -65,7 +65,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>336.000000</Value>
+					<Value>304.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa963f5, 0x1a638cd4)</Identifier>
@@ -73,7 +73,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x207c9054, 0x3c841b63)</Identifier>
-					<Value>242.000000</Value>
+					<Value>240.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x30a4e5c9, 0x83502953)</Identifier>
@@ -132,14 +132,14 @@
 					<TypeIdentifier>(0x330306dd, 0x74a95f98)</TypeIdentifier>
 					<Name>Filename</Name>
 					<DefaultValue>${Path_Data}/plugins/stimulation/simple-keyboard-to-stimulations.txt</DefaultValue>
-					<Value>C:/Users/Adam/Documents/GitHub/Brain-scanner-device/Source/keyboard_stim.txt</Value>
+					<Value>C:/Users/Adam/Documents/GitHub/Brain-scanner-device/Scenarios/AD_Buttons/ad_stim.txt</Value>
 					<Modifiability>false</Modifiability>
 				</Setting>
 			</Settings>
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>160.000000</Value>
+					<Value>144.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa963f5, 0x1a638cd4)</Identifier>
@@ -265,7 +265,7 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>336.000000</Value>
+					<Value>304.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa963f5, 0x1a638cd4)</Identifier>
@@ -331,7 +331,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa7a38f, 0x54edbe0b)</Identifier>
-					<Value>176.000000</Value>
+					<Value>144.000000</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x1fa963f5, 0x1a638cd4)</Identifier>
@@ -386,7 +386,7 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1b32c44c, 0x1905e0e9)</Identifier>
-					<Value>199</Value>
+					<Value>167</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x358ae8b5, 0x0f8bacd1)</Identifier>
@@ -394,11 +394,11 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x3f0a3b27, 0x570913d2)</Identifier>
-					<Value>314</Value>
+					<Value>282</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x6267b5c5, 0x676e3e42)</Identifier>
-					<Value>234</Value>
+					<Value>232</Value>
 				</Attribute>
 			</Attributes>
 		</Link>
@@ -415,7 +415,7 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1b32c44c, 0x1905e0e9)</Identifier>
-					<Value>199</Value>
+					<Value>167</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x358ae8b5, 0x0f8bacd1)</Identifier>
@@ -423,7 +423,7 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x3f0a3b27, 0x570913d2)</Identifier>
-					<Value>309</Value>
+					<Value>277</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x6267b5c5, 0x676e3e42)</Identifier>
@@ -444,7 +444,7 @@
 			<Attributes>
 				<Attribute>
 					<Identifier>(0x1b32c44c, 0x1905e0e9)</Identifier>
-					<Value>178</Value>
+					<Value>162</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x358ae8b5, 0x0f8bacd1)</Identifier>
@@ -452,11 +452,11 @@
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x3f0a3b27, 0x570913d2)</Identifier>
-					<Value>314</Value>
+					<Value>282</Value>
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x6267b5c5, 0x676e3e42)</Identifier>
-					<Value>249</Value>
+					<Value>247</Value>
 				</Attribute>
 			</Attributes>
 		</Link>
@@ -478,7 +478,7 @@ Enter the path to your local Matlab installation.
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
-					<Value>432.000000</Value>
+					<Value>400.000000</Value>
 				</Attribute>
 			</Attributes>
 		</Comment>
@@ -497,21 +497,14 @@ Enter the path to your local &quot;keyboard_stim.txt&quot;.
 				</Attribute>
 				<Attribute>
 					<Identifier>(0x7234b86b, 0x2b8651a5)</Identifier>
-					<Value>192.000000</Value>
+					<Value>160.000000</Value>
 				</Attribute>
 			</Attributes>
 		</Comment>
 	</Comments>
 	<VisualisationTree>
 		<VisualisationWidget>
-			<Identifier>(0x000006d1, 0x00007833)</Identifier>
-			<Type>3</Type>
-			<ParentIdentifier>(0xffffffff, 0xffffffff)</ParentIdentifier>
-			<BoxIdentifier>(0x0000564a, 0x00007043)</BoxIdentifier>
-			<NumChildren>0</NumChildren>
-		</VisualisationWidget>
-		<VisualisationWidget>
-			<Identifier>(0x00001330, 0x00003cd2)</Identifier>
+			<Identifier>(0x00003336, 0x00007548)</Identifier>
 			<Name>Default window</Name>
 			<Type>1</Type>
 			<ParentIdentifier>(0xffffffff, 0xffffffff)</ParentIdentifier>
@@ -529,26 +522,33 @@ Enter the path to your local &quot;keyboard_stim.txt&quot;.
 			</Attributes>
 		</VisualisationWidget>
 		<VisualisationWidget>
-			<Identifier>(0x00005fc3, 0x00000a98)</Identifier>
+			<Identifier>(0x00003819, 0x00000fec)</Identifier>
+			<Type>3</Type>
+			<ParentIdentifier>(0xffffffff, 0xffffffff)</ParentIdentifier>
+			<BoxIdentifier>(0x0000564a, 0x00007043)</BoxIdentifier>
+			<NumChildren>0</NumChildren>
+		</VisualisationWidget>
+		<VisualisationWidget>
+			<Identifier>(0x00006dd1, 0x00001b7a)</Identifier>
 			<Type>3</Type>
 			<ParentIdentifier>(0xffffffff, 0xffffffff)</ParentIdentifier>
 			<BoxIdentifier>(0x00006663, 0x00007d18)</BoxIdentifier>
 			<NumChildren>0</NumChildren>
 		</VisualisationWidget>
 		<VisualisationWidget>
-			<Identifier>(0x00007572, 0x00005531)</Identifier>
+			<Identifier>(0x000070ca, 0x00006a0d)</Identifier>
 			<Name>Default tab</Name>
 			<Type>2</Type>
-			<ParentIdentifier>(0x00001330, 0x00003cd2)</ParentIdentifier>
+			<ParentIdentifier>(0x00003336, 0x00007548)</ParentIdentifier>
 			<Index>0</Index>
 			<BoxIdentifier>(0xffffffff, 0xffffffff)</BoxIdentifier>
 			<NumChildren>1</NumChildren>
 		</VisualisationWidget>
 		<VisualisationWidget>
-			<Identifier>(0x00005a83, 0x0000589a)</Identifier>
+			<Identifier>(0x00006818, 0x000068ea)</Identifier>
 			<Name>Empty</Name>
 			<Type>0</Type>
-			<ParentIdentifier>(0x00007572, 0x00005531)</ParentIdentifier>
+			<ParentIdentifier>(0x000070ca, 0x00006a0d)</ParentIdentifier>
 			<Index>0</Index>
 			<BoxIdentifier>(0xffffffff, 0xffffffff)</BoxIdentifier>
 			<NumChildren>0</NumChildren>
